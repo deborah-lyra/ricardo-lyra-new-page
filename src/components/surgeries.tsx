@@ -94,8 +94,8 @@ const surgeries = [
   
   export function Surgeries() {
     return (
-      <section id="surgeries" className="bg-slate-100 py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section id="surgeries" className="bg-slate-100 py-20">
+        <div className="max-w-6xl mx-auto px-6">
   
           {/* Cabeçalho */}
           <div className="text-center mb-12">
@@ -109,8 +109,29 @@ const surgeries = [
             </p>
           </div>
   
-          {/* Grid de cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        </div>
+  
+        <div className="px-6 sm:px-6 sm:max-w-6xl sm:mx-auto">
+          {/* Mobile: scroll horizontal */}
+          <div className="flex gap-4 overflow-x-auto pb-4 sm:hidden snap-x snap-mandatory scrollbar-hide">
+            {surgeries.map((item) => (
+              <div
+                key={item.name}
+                className="snap-start flex-shrink-0 w-64 bg-white border border-slate-200 rounded-2xl p-6 flex flex-col gap-4"
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="text-sm font-medium text-[#0a1628] mb-2">{item.name}</h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+  
+          {/* Desktop: grid normal */}
+          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {surgeries.map((item) => (
               <div
                 key={item.name}
@@ -126,20 +147,20 @@ const surgeries = [
               </div>
             ))}
           </div>
-  
-          {/* CTA */}
-          <div className="text-center mt-12">
-            <a
-              href="https://wa.me/5581999999999"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#1a6fa8] hover:bg-[#1a5f94] text-white text-sm font-medium px-8 py-3 rounded-lg transition-colors inline-block"
-            >
-              Agendar consulta
-            </a>
-          </div>
-  
         </div>
+  
+    
+        <div className="text-center mt-12 px-6">
+          <a
+            href="https://wa.me/5581999999999"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#1a6fa8] hover:bg-[#1a5f94] text-white text-sm font-medium px-8 py-3 rounded-lg transition-colors inline-block"
+          >
+            Agendar consulta
+          </a>
+        </div>
+  
       </section>
     )
   }
