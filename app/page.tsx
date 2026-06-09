@@ -1,6 +1,8 @@
 "use client"
 
 import { AboutMe } from "@/src/components/aboutMe";
+import { Contacts } from "@/src/components/contact";
+import { Footer } from "@/src/components/footer";
 import { Hero } from "@/src/components/hero";
 import { ModalQuestions } from "@/src/components/modalQuestions";
 import Navbar from "@/src/components/navbar";
@@ -22,6 +24,8 @@ export default function Home() {
       <AboutMe />
       <Specialization />
       <Surgeries />
+      <Contacts/>
+      <Footer/>
       {isModalOpen && <ModalQuestions closeModal={toggleQuestionnaire} />}
 
       <button
