@@ -1,9 +1,16 @@
+"use client"
+import { ModalUnidade } from '@/src/components/modalUnidade'
+import { useState } from 'react'
+
+
 export default function Urology() {
-    return (
+  const [showUnidade, setShowUnidade] = useState(false)
+
+  return (
+    <>
       <main className="min-h-screen bg-[#0a1628] px-6 py-20">
         <div className="max-w-3xl mx-auto">
-  
-          {/* Ícone */}
+
           <div className="flex justify-center mb-8">
             <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 opacity-80">
               <path
@@ -14,8 +21,7 @@ export default function Urology() {
               <ellipse cx="32" cy="38" rx="8" ry="7" stroke="#7ab8d9" strokeWidth="1" opacity="0.4" />
             </svg>
           </div>
-  
-          {/* Cabeçalho */}
+
           <div className="text-center mb-12">
             <span className="inline-flex items-center gap-2 bg-[#2d7aaa]/20 border border-[#2d7aaa]/40 text-[#7ab8d9] text-xs px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
               Especialização
@@ -23,8 +29,7 @@ export default function Urology() {
             <h1 className="text-4xl font-medium text-[#f0f4f8] mb-3">Urologia</h1>
             <p className="text-[#7ab8d9] text-base">Diagnóstico e tratamento do trato urinário</p>
           </div>
-  
-          {/* Conteúdo */}
+
           <div className="bg-[#0f2137] border border-[#1e3a55] rounded-2xl p-8 mb-6">
             <h2 className="text-lg font-medium text-[#f0f4f8] mb-4">O que é Urologia?</h2>
             <p className="text-[#8899aa] text-sm leading-relaxed mb-4">
@@ -37,7 +42,7 @@ export default function Urology() {
               a urologia moderna oferece tratamentos cada vez mais precisos e com recuperação mais rápida.
             </p>
           </div>
-  
+
           <div className="bg-[#0f2137] border border-[#1e3a55] rounded-2xl p-8 mb-6">
             <h2 className="text-lg font-medium text-[#f0f4f8] mb-4">Condições tratadas</h2>
             <ul className="flex flex-col gap-3">
@@ -57,20 +62,20 @@ export default function Urology() {
               ))}
             </ul>
           </div>
-  
+
           <div className="text-center mt-10">
-            <a
-              href="https://wa.me/5581999999999"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#1a6fa8] hover:bg-[#1a5f94] text-[#e8f3fb] text-sm font-medium px-8 py-3 rounded-lg transition-colors inline-block"
+            <button
+              onClick={() => setShowUnidade(true)}
+              className="bg-[#1a6fa8] hover:bg-[#1a5f94] text-[#e8f3fb] text-sm font-medium px-8 py-3 rounded-lg transition-colors"
             >
               Agendar consulta
-            </a>
+            </button>
           </div>
-  
+
         </div>
       </main>
-    )
-  }
-  
+
+      {showUnidade && <ModalUnidade onClose={() => setShowUnidade(false)} />}
+    </>
+  )
+}
