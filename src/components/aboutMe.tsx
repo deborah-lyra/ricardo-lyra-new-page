@@ -48,7 +48,7 @@ export function AboutMe() {
 
   return (
     <section id="aboutMe" className="bg-slate-200 py-20 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 items-start">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
 
         <div>
           {/* Texto — esquerda */}
