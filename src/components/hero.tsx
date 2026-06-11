@@ -42,7 +42,7 @@ export function Hero() {
           </p>
 
           <a
-            href="#sobre"
+            href="#aboutMe"
             className="lg:text-lg border border-[#2d6a9f] text-[#7ab8d9] hover:bg-[#2d6a9f]/20 text-sm px-6 py-2.5 rounded-lg transition-colors"
           >
             Saiba mais
