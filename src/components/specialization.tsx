@@ -42,7 +42,7 @@ const specializations = [
 
 export function Specialization() {
   return (
-    <section className="bg-[#0a1628] py-20 px-6">
+    <section id='specialization' className="bg-[#0a1628] py-20 px-6">
       <div className="max-w-4xl mx-auto text-center mb-12">
         <span className="text-bold inline-flex items-center gap-2 bg-[#2d7aaa]/20 border border-[#2d7aaa]/40 text-[#7ab8d9] text-xs px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
           Especializações

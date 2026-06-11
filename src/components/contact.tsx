@@ -19,7 +19,7 @@ const locais = [
   
   export function Contacts() {
     return (
-      <section id="contato" className="bg-[#0a1628] py-20 px-6">
+      <section id="contact" className="bg-[#0a1628] py-20 px-6">
         <div className="max-w-4xl mx-auto">
   
           {/* Cabeçalho */}

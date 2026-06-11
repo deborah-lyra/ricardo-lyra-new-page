@@ -2,12 +2,12 @@ import Image from 'next/image'
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-slate-300 to-[#0a1628] border-t border-slate-200 px-6 py-10">
+    <footer className="bg-slate-200 border-t border-slate-200 px-6 py-10">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6">
 
         {/* Logo */}
-        <div className="flex-shrink-0">
-          <Image src="/logo.svg" alt="Logo Dr. Ricardo Lyra" width={80} height={80} />
+        <div className="flex-shrink-0 ">
+          <Image src="/logo.svg" alt="Logo Dr. Ricardo Lyra" width={80} height={80} className='rounded-xl'/>
         </div>
 
         {/* Info central */}
@@ -22,7 +22,7 @@ export function Footer() {
             href="https://www.instagram.com/ricardolyraandrologista/"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 rounded-lg bg-white border border-slate-200 hover:border-blue-300 flex items-center justify-center text-slate-500 hover:text-blue-600 transition-all"
+            className="w-12 h-12 rounded-lg bg-[#2d7aaa]/20 border border-slate-200 hover:border-blue-300 flex items-center justify-center text-slate-800 hover:text-blue-600 transition-all"
             aria-label="Instagram"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
@@ -36,7 +36,7 @@ export function Footer() {
             href="https://br.linkedin.com/in/ricardo-lyra-b937b531"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 rounded-lg bg-white border border-slate-200 hover:border-blue-300 flex items-center justify-center text-slate-500 hover:text-blue-600 transition-all"
+            className="w-12 h-12 rounded-lg bg-[#2d7aaa]/20 border border-slate-200 hover:border-blue-300 flex items-center justify-center text-slate-800 hover:text-blue-600 transition-all"
             aria-label="LinkedIn"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
@@ -50,7 +50,7 @@ export function Footer() {
             href="https://www.facebook.com/ricardo.andrologista/?locale=pt_BR"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-12 h-12 rounded-lg bg-white border border-slate-200 hover:border-blue-300 flex items-center justify-center text-slate-500 hover:text-blue-600 transition-all"
+            className="w-12 h-12 rounded-lg bg-[#2d7aaa]/20 border border-slate-200 hover:border-blue-300 flex items-center justify-center text-slate-800 hover:text-blue-600 transition-all"
             aria-label="Facebook"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
@@ -63,7 +63,7 @@ export function Footer() {
 
       {/* Rodapé inferior */}
       <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-slate-300 text-center">
-        <p className="text-xs text-slate-300">
+        <p className="text-xs text-slate-800">
           © {new Date().getFullYear()} Dr. Ricardo Lyra · Todos os direitos reservados
         </p>
       </div>
