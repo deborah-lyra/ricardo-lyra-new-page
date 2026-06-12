@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dr. Ricardo Lyra",
   description: "Médico Urologista e Andrologista",
+  icons: {
+    icon: '/logo.svg',
+  },
 };
 
 export default function RootLayout({
