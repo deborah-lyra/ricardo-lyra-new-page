@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 
 export function Footer() {
   return (
@@ -7,7 +7,7 @@ export function Footer() {
 
         {/* Logo */}
         <div className="flex-shrink-0 ">
-          <Image src="/logo.svg" alt="Logo Dr. Ricardo Lyra" width={80} height={80} className='rounded-xl'/>
+          <img src="/logo.svg" alt="Logo Dr. Ricardo Lyra" width={80} height={80} className='rounded-xl'/>
         </div>
 
         {/* Info central */}
