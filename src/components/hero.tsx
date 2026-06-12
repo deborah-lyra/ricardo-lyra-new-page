@@ -7,21 +7,23 @@ export function Hero() {
         CRM/PE 9981
       </div>
 
-      {/* Foto ocupando lado direito — absoluta */}
-      <div className="absolute right-0 top-0 h-full w-1/2 flex items-end justify-end">
+      {/* Foto — mobile: fundo completo / desktop: metade direita */}
+      <div className="absolute inset-0 md:left-1/2 md:inset-y-0 md:right-0">
         <img
           src="/foto-medico.png"
           alt="Dr. Ricardo Lyra"
-          className="h-full w-full object-cover object-center"
+          className="w-full h-full object-cover object-center"
         />
-        {/* Gradiente cobrindo a borda esquerda da foto para fundir com o fundo */}
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0a1628] to-transparent" />
-        {/* Gradiente cobrindo a base da foto */}
+        {/* Overlay mobile */}
+        <div className="absolute inset-0 bg-[#0a1628]/70 md:hidden" />
+        {/* Gradiente desktop  */}
+        <div className="hidden md:block absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#0a1628] to-transparent" />
+        {/* Gradiente base  */}
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0a1628] to-transparent" />
       </div>
 
-      {/* Conteúdo — lado esquerdo */}
-      <div className="relative z-10 flex flex-col justify-center min-h-[40rem] max-w-6xl mx-auto px-8 pb-14">
+      {/* Conteúdo */}
+      <div className="relative z-10 flex flex-col justify-center min-h-[40rem] max-w-6xl mx-auto px-8">
         <div className="flex flex-col items-start max-w-lg">
 
           <div className="inline-flex items-center gap-2 bg-[#2d7aaa]/20 border border-[#2d7aaa]/40 text-[#7ab8d9] text-xs px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest">
@@ -42,7 +44,7 @@ export function Hero() {
           </p>
 
           <a
-            href="#aboutMe"
+            href="#sobre"
             className="lg:text-lg border border-[#2d6a9f] text-[#7ab8d9] hover:bg-[#2d6a9f]/20 text-sm px-6 py-2.5 rounded-lg transition-colors"
           >
             Saiba mais
